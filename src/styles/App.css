@@ -1,0 +1,76 @@
+/* src/styles/App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .movie-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .genre-filter {
+    margin: 20px;
+  }
+  
+/* Container for the genre buttons */
+.genre-filter {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents line breaks */
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    width: 100%; /* Ensures the container width */
+    max-width: 100%; /* Prevents expansion beyond the parent container */
+  }
+  
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+  .genre-filter::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  /* Style for the genre buttons */
+  .genre-button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-shrink: 0; /* Prevents buttons from shrinking */
+  }
+  
+  /* Style for active/selected genre buttons */
+  .genre-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
